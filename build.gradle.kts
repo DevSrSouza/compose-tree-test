@@ -1,6 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
+    application
     kotlin("jvm") version "1.4.32"
     id("org.jetbrains.compose") version "0.4.0-build182"
 }
@@ -16,6 +17,10 @@ repositories {
 dependencies {
     implementation(compose.runtime)
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.3")
+}
+
+application {
+    mainClassName = "TestKt"
 }
 
 tasks.withType<KotlinCompile>() {

@@ -1,8 +1,8 @@
-package compose
-
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import compose.composable
+import compose.renderComposable
 import domain.Node
 import kotlinx.coroutines.delay
 
