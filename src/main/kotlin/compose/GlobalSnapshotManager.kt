@@ -24,7 +24,7 @@ class GlobalSnapshotManager(coroutineDispatcher: CoroutineDispatcher) {
 
     @OptIn(ExperimentalComposeApi::class)
     fun ensureStarted() {
-        if (!started.compareAndSet(false, true)) {
+        if (started.compareAndSet(false, true)) {
             removeWriteObserver = Snapshot.registerGlobalWriteObserver(globalWriteObserver)
         }
     }
