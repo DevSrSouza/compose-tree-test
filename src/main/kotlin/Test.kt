@@ -15,10 +15,6 @@ suspend fun main() {
         composable(Node("child1")) {
             val testState = remember { state }
 
-            LaunchedEffect(testState) {
-                println("testState: ${testState.value}")
-            }
-
             if(testState.value) {
                 composable(Node("child2")) {
                     composable(Node("child3")) {}
